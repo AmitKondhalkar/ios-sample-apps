@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jTd-vu-Ofu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="16h-zA-jDM">
+            <objects>
+                <viewController id="W9l-KJ-kv5" userLabel="HomeViewController" customClass="HomeViewController" customModule="Login" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CoZ-3L-0dp"/>
+                        <viewControllerLayoutGuide type="bottom" id="u1y-UR-kZc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nfl-n9-tGh" userLabel="LoadingView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-NK-TlG">
+                                <rect key="frame" x="212" y="289" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLz-lS-opQ">
+                                <rect key="frame" x="247" y="318" width="107" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="154" y="185" width="93" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="W9l-KJ-kv5" eventType="touchUpInside" id="Mgl-0P-IIq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9202902800453534" green="1" blue="0.072713452979302318" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="nwe-Gh-rtO"/>
+                    <connections>
+                        <outlet property="lblUserMsg" destination="FnX-NK-TlG" id="dur-aJ-TGo"/>
+                        <segue destination="aRO-4V-jgg" kind="presentation" identifier="goto_login" id="6mY-Gf-E2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2W-lo-X6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="-152"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="Zx9-hZ-ZiN">
+            <objects>
+                <viewController id="aRO-4V-jgg" userLabel="LoginViewController" customClass="LoginViewController" customModule="Login" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kv0-a3-VxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="XRC-kA-15Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0R-QP-Khj" userLabel="LoginView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signing in.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-lk-scq">
+                                <rect key="frame" x="258" y="205" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-gL-kej">
+                                <rect key="frame" x="207" y="258" width="187" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-Ro-1ef">
+                                <rect key="frame" x="207" y="298" width="187" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Password"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivD-ks-697">
+                                <rect key="frame" x="259" y="343" width="84" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="aRO-4V-jgg" eventType="touchUpInside" id="Ha7-XI-vnh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POLYGLOT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXf-mT-q9W">
+                                <rect key="frame" x="104" y="107" width="393" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20360870202196235" green="1" blue="0.20131716697210733" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfEmail" destination="g5K-gL-kej" id="kY2-Ek-p9W"/>
+                        <outlet property="tfPassword" destination="2zZ-Ro-1ef" id="sRh-0Z-N6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXJ-Wc-355" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="-152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jNp-Ie-NZg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jTd-vu-Ofu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ou8-Tf-2n9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W9l-KJ-kv5" kind="relationship" relationship="rootViewController" id="OQA-LE-yBY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5s-dh-Vjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="-151"/>
+        </scene>
+    </scenes>
+</document>
